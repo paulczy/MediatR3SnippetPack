@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>CreateMediatR3CommandReturn</Title>
+      <Author>Paul Czywczynski</Author>
+      <Description>Creates a MediatR 3 Command and Handler with constructor and return type</Description>
+      <Shortcut>mcr</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>returnType</ID>
+          <ToolTip>Property type</ToolTip>
+          <Default>TReturn</Default>
+        </Literal>
+      </Declarations>
+      <Imports>
+        <Import>
+          <Namespace>MediatR</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="CSharp">
+        <![CDATA[
+        public class Command : IRequest<$returnType$>
+				{ 
+				}
+
+				public class CommandHandler : IAsyncRequestHandler<Command, $returnType$>
+				{
+          public Handler()
+          {
+          }
+          
+					public async Task<$returnType$> Handle(Command criteria)
+					{
+						throw new NotImplementedException();
+					}
+				}
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

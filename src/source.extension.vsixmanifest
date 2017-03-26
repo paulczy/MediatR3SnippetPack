@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="e99c5502-d3b4-4a6c-8fc8-3252e3900cc0" Version="1.0" Language="en-US" Publisher="paulczy" />
+    <DisplayName>MediatR 3 Snippet Pack</DisplayName>
+    <Description xml:space="preserve">MediatR 3 snippet pack for Visual Studio</Description>
+    <MoreInfo>https://github.com/paulczy/MediatR3SnippetPack/</MoreInfo>
+    <Icon>Resources\gradient_128x128.png</Icon>
+    <PreviewImage>Resources\Preview.png</PreviewImage>
+    <Tags>mediatr snippets</Tags>
+  </Metadata>
+  <Installation>
+    <!--Microsoft.VisualStudio.Pro includes all SKUs such as Community, Pro, Ultimate and Enterprise-->
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="14.0" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="15.0" />
+  </Installation>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,16.0)" DisplayName="Visual Studio core editor" />
+    <Prerequisite Id="Microsoft.VisualStudio.Component.Roslyn.LanguageServices" Version="[15.0.26208.0,16.0)" DisplayName="C# and Visual Basic" />
+  </Prerequisites>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="Snippets\snippets.pkgdef" />
+  </Assets>
+</PackageManifest>
