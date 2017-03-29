@@ -23,17 +23,17 @@
       </Imports>
       <Code Language="CSharp">
         <![CDATA[
-        public class Command : IRequest<$returnType$>
+        public class Criteria : IRequest<$returnType$>
 				{ 
 				}
 
-				public class CommandHandler : IAsyncRequestHandler<Command, $returnType$>
+				public class Handler : IAsyncRequestHandler<Criteria, $returnType$>
 				{
           public Handler()
           {
           }
           
-					public async Task<$returnType$> Handle(Command criteria)
+					public async Task<$returnType$> Handle(Criteria criteria)
 					{
 						throw new NotImplementedException();
 					}

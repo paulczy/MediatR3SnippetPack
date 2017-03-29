@@ -23,7 +23,7 @@
       </Imports>
       <Code Language="CSharp">
         <![CDATA[
-        public class Query : IRequest<Model>
+        public class Criteria : IRequest<Model>
 				{ 
 				}
 
@@ -31,17 +31,15 @@
         {
         }
 
-				public class Handler : IAsyncRequestHandler<Query, Model>
+				public class Handler : IAsyncRequestHandler<Criteria, Model>
 				{                    
           public Handler()
           {
           }
           
-					public async Task<Model> Handle(Query criteria)
+					public async Task<Model> Handle(Criteria criteria)
 					{
 						throw new NotImplementedException();
-            // var model = new Model();
-            // return model;
 					}
 				}
         ]]>
