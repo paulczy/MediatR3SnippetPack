@@ -5,15 +5,25 @@
     <Header>
       <Title>CreateMediatR3CommandReturn</Title>
       <Author>Paul Czywczynski</Author>
-      <Description>Creates a MediatR 3 Command and Handler with constructor and return type</Description>
+      <Description>Creates a MediatR 3 Command and Handler with return type</Description>
       <Shortcut>mcr</Shortcut>
     </Header>
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>returnType</ID>
-          <ToolTip>Property type</ToolTip>
-          <Default>TReturn</Default>
+          <ID>TRequest</ID>
+          <ToolTip>Property type for TRequest</ToolTip>
+          <Default>Request</Default>
+        </Literal>
+        <Literal>
+          <ID>TRequestPropertyName</ID>
+          <ToolTip>Property name for TRequest</ToolTip>
+          <Default>message</Default>
+        </Literal>
+        <Literal>
+          <ID>TResponse</ID>
+          <ToolTip>Property type for TResponse</ToolTip>
+          <Default>Response</Default>
         </Literal>
       </Declarations>
       <Imports>
@@ -23,20 +33,26 @@
       </Imports>
       <Code Language="CSharp">
         <![CDATA[
-        public class Criteria : IRequest<$returnType$>
+        public class $TRequest$ : IRequest<$TResponse$>
 				{ 
 				}
 
-				public class Handler : IAsyncRequestHandler<Criteria, $returnType$>
+        public class $TResponse$
+        {
+        }
+        
+				public class Handler : IAsyncRequestHandler<$TRequest$, $TResponse$>
 				{
-          public Handler()
-          {
-          }
+            public Handler()
+            {
+            }
           
-					public async Task<$returnType$> Handle(Criteria criteria)
-					{
-						throw new NotImplementedException();
-					}
+					  public async Task<$TResponse$> Handle($TRequest$ $TRequestPropertyName$)
+					  {
+                // Handler code ...
+
+						    throw new NotImplementedException();
+					  }
 				}
         ]]>
       </Code>

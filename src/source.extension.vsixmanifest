@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="e99c5502-d3b4-4a6c-8fc8-3252e3900cc0" Version="1.0" Language="en-US" Publisher="paulczy" />
+    <Identity Id="e99c5502-d3b4-4a6c-8fc8-3252e3900cc0" Version="1.1" Language="en-US" Publisher="paulczy" />
     <DisplayName>MediatR 3 Snippet Pack</DisplayName>
     <Description xml:space="preserve">MediatR 3 snippet pack for Visual Studio</Description>
     <MoreInfo>https://github.com/paulczy/MediatR3SnippetPack/</MoreInfo>

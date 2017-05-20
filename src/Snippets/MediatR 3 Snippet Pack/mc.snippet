@@ -9,6 +9,18 @@
       <Shortcut>mc</Shortcut>
     </Header>
     <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>TRequest</ID>
+          <ToolTip>Property type for TRequest</ToolTip>
+          <Default>Request</Default>
+        </Literal>
+        <Literal>
+          <ID>TRequestPropertyName</ID>
+          <ToolTip>Property name for TRequest</ToolTip>
+          <Default>request</Default>
+        </Literal>
+      </Declarations>
       <Imports>
         <Import>
           <Namespace>MediatR</Namespace>
@@ -16,20 +28,22 @@
       </Imports>
       <Code Language="CSharp">
         <![CDATA[
-        public class Criteria : IRequest
+        public class $TRequest$ : IRequest<Unit>
 				{ 
 				}
 
-				public class Handler : IAsyncRequestHandler<Criteria>
+				public class Handler : IAsyncRequestHandler<$TRequest$, Unit>
 				{
-          public Handler()
-          { 
-          }
+            public Handler()
+            { 
+            }
         
-					public async Task Handle(Criteria criteria)
-					{
-						throw new NotImplementedException();
-					}
+					  public async Task Handle($TRequest$ $TRequestPropertyName$)
+					  {
+                // Handler code ...
+              
+                return Unit.Value;
+					  }
 				}
         ]]>
       </Code>

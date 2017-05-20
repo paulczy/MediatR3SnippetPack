@@ -53,10 +53,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Snippets\MediatR 3 Snippet Pack\mq.snippet">
-      <IncludeInVSIX>true</IncludeInVSIX>
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Snippets\MediatR 3 Snippet Pack\mcr.snippet">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
